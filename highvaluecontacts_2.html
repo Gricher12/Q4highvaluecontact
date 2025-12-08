@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4 2025 Notable Engagers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #1a1a1a;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+        .subtitle {
+            font-size: 1.1em;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 40px 50px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .stat-card {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .stat-number {
+            font-size: 3em;
+            font-weight: 700;
+            color: #667eea;
+            display: block;
+            line-height: 1;
+        }
+        .stat-label {
+            color: #6c757d;
+            font-size: 0.9em;
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+        }
+        .content-wrapper {
+            padding: 50px;
+        }
+        .two-column-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        .column {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e9ecef;
+        }
+        .column-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #667eea;
+        }
+        .column-title {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+        .column-count {
+            background: #667eea;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+        .category {
+            margin-bottom: 25px;
+        }
+        .category-title {
+            font-size: 0.95em;
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .category-badge {
+            background: #667eea;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.75em;
+            font-weight: 600;
+        }
+        .contact {
+            background: white;
+            padding: 10px 14px;
+            margin: 6px 0;
+            border-radius: 6px;
+            font-size: 0.9em;
+            border-left: 3px solid #667eea;
+            transition: all 0.2s ease;
+        }
+        .contact:hover {
+            transform: translateX(5px);
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.15);
+        }
+        .contact strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+        .contact-role {
+            color: #6c757d;
+            font-size: 0.95em;
+        }
+        .highlight-section {
+            margin-top: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+            border-radius: 12px;
+            text-align: center;
+        }
+        .highlight-title {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #2d3436;
+            margin-bottom: 10px;
+        }
+        .highlight-content {
+            font-size: 1.1em;
+            color: #2d3436;
+        }
+        .insight-section {
+            margin-top: 30px;
+            padding: 30px;
+            background: linear-gradient(135deg, #a8e6cf 0%, #3eecac 100%);
+            border-radius: 12px;
+        }
+        .insight-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .insight-content {
+            font-size: 1em;
+            color: #2d3436;
+            line-height: 1.7;
+        }
+        @media (max-width: 968px) {
+            .two-column-grid {
+                grid-template-columns: 1fr;
+            }
+            .header, .content-wrapper {
+                padding: 30px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Q4 2025 Notable Engagers</h1>
+            <p class="subtitle">High-Value Contact Engagement Summary</p>
+        </div>
+        
+        <div class="stats-container">
+            <div class="stat-card">
+                <span class="stat-number">47</span>
+                <div class="stat-label">Unique High-Value Contacts</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">60%</span>
+                <div class="stat-label">Mission-Aligned</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">28</span>
+                <div class="stat-label">Strategic Contacts</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">19</span>
+                <div class="stat-label">High-Profile Influencers</div>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="two-column-grid">
+                <!-- Mission-Aligned Column -->
+                <div class="column">
+                    <div class="column-header">
+                        <h2 class="column-title">Mission-Aligned</h2>
+                        <span class="column-count">28 Contacts</span>
+                    </div>
+
+                    <div class="category">
+                        <div class="category-title">
+                            Government & Politics
+                            <span class="category-badge">3</span>
+                        </div>
+                        <div class="contact">
+                            <strong>Georgie Carey</strong>
+                            <div class="contact-role">Former Deputy Mayor, Harvard MPP</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Clare Gibney</strong>
+                            <div class="contact-role">ED Chief of Staff, APRA</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Fleur Katsmartin</strong>
+                            <div class="contact-role">Chief Legal Officer, Royal Melbourne Hospital</div>
+                        </div>
+                    </div>
+
+                    <div class="category">
+                        <div class="category-title">
+                            Women in Politics / Parliamentary Culture
+                            <span class="category-badge">3</span>
+                        </div>
+                        <div class="contact">
+                            <strong>Clare Feenan</strong>
+                            <div class="contact-role">UWA Public Policy Institute & Pathways to Politics for Women</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Felicity Menzies</strong>
+                            <div class="contact-role">Respect@Work expertise</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Ashleigh Streeter-Jones</strong>
+                            <div class="contact-role">Youth advocacy leader, multiple awards</div>
+                        </div>
+                    </div>
+
+                    <div class="category">
+                        <div class="category-title">
+                            Deliberative Democracy / Civic Engagement
+                            <span class="category-badge">3</span>
+                        </div>
+                        <div class="contact">
+                            <strong>Lyndal Mackintosh</strong>
+                            <div class="contact-role">MosaicLab Principal Facilitator</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Compassion in Politics</strong>
+                            <div class="contact-role">Relevant advocacy org</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Charter for Compassion</strong>
+                            <div class="contact-role">Relevant advocacy org</div>
+                        </div>
+                    </div>
+
+                    <div class="category">
+                        <div class="category-title">
+                            Systems Change / Leadership
+                            <span class="category-badge">5</span>
+                        </div>
+                        <div class="contact">
+                            <strong>Dr Josie McLean</strong>
+                            <div class="contact-role">Systemic change expertise</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Georgina Harrisson</strong>
+                            <div class="contact-role">Senior exec, system reform</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Melanie Rayment</strong>
+                            <div class="contact-role">Senior exec, systems change</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Sally Fawkes</strong>
+                            <div class="contact-role">Board Director, futures/governance specialist</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Dr. Clare Allen</strong>
+                            <div class="contact-role">7x award-winning CEO, complex change</div>
+                        </div>
+                    </div>
+
+                    <div class="category">
+                        <div class="category-title">
+                            Academia & Research
+                            <span class="category-badge">5</span>
+                        </div>
+                        <div class="contact">
+                            <strong>Rosalind Dixon</strong>
+                            <div class="contact-role">Professor of Law, UNSW</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Mary Picard, PhD</strong>
+                            <div class="contact-role">Climate, gender equality expertise</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Kees Dorst</strong>
+                            <div class="contact-role">Professor of Transdisciplinary Innovation, UTS</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Chris Riedy</strong>
+                            <div class="contact-role">Professor, UTS</div>
+                        </div>
+                        <div class="contact">
+                            <strong>UTS Transdisciplinary School</strong>
+                            <div class="contact-role">Major university institution</div>
+                        </div>
+                    </div>
+
+                    <div class="category">
+                        <div class="category-title">
+                            International / UN
+                            <span class="category-badge">2</span>
+                        </div>
+                        <div class="contact">
+                            <strong>Dr Donnell Davis</strong>
+                            <div class="contact-role">UN Association Australia President</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Shaila Shahid</strong>
+                            <div class="contact-role">UNDRR award winner, climate/DRR expert</div>
+                        </div>
+                    </div>
+
+                    <div class="category">
+                        <div class="category-title">
+                            Funding Sector
+                            <span class="category-badge">2</span>
+                        </div>
+                        <div class="contact">
+                            <strong>Maxine Morrison</strong>
+                            <div class="contact-role">Grant strategy expertise</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Jodi Kennedy</strong>
+                            <div class="contact-role">GM Philanthropy, Equity Trustees</div>
+                        </div>
+                    </div>
+
+                    <div class="category">
+                        <div class="category-title">
+                            Next25 Related
+                            <span class="category-badge">5</span>
+                        </div>
+                        <div class="contact">
+                            <div class="contact-role">Multiple internal/organizational accounts</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- High-Profile Column -->
+                <div class="column">
+                    <div class="column-header">
+                        <h2 class="column-title">High-Profile Influencers</h2>
+                        <span class="column-count">19 Contacts</span>
+                    </div>
+
+                    <div class="category">
+                        <div class="category-title">
+                            Corporate Leadership
+                            <span class="category-badge">14</span>
+                        </div>
+                        <div class="contact">
+                            <strong>Carolyn Bendall (GAICD)</strong>
+                            <div class="contact-role">NED, CMO</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Kate Pollard</strong>
+                            <div class="contact-role">Female founder, NED Stone & Chalk</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Narelle Hooper</strong>
+                            <div class="contact-role">NED The Ethics Centre</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Ellie Laing-Southwood GAICD</strong>
+                            <div class="contact-role">Executive Leader, Board member</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Lisa Gray</strong>
+                            <div class="contact-role">NED and CEO</div>
+                        </div>
+                        <div class="contact">
+                            <strong>David Fagan</strong>
+                            <div class="contact-role">Chairman BDO Australia</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Sally Bruce</strong>
+                            <div class="contact-role">CEO with 30-year track record</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Becky Hyde</strong>
+                            <div class="contact-role">Senior Executive, Medibank</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Louise Thomson</strong>
+                            <div class="contact-role">Group Company Secretary, NAB</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Jo Beckwith</strong>
+                            <div class="contact-role">Head of External Communications, NAB</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Simone Van Veen</strong>
+                            <div class="contact-role">Chief Member Officer, Rest</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Andrew Retschko</strong>
+                            <div class="contact-role">Senior Exec Medibank, D&I</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Sharon Rockell</strong>
+                            <div class="contact-role">Head of Corporate Affairs, PwC</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Stephen T.</strong>
+                            <div class="contact-role">Author, reputation expert</div>
+                        </div>
+                    </div>
+
+                    <div class="category">
+                        <div class="category-title">
+                            Media & Technology
+                            <span class="category-badge">5</span>
+                        </div>
+                        <div class="contact">
+                            <strong>Angela Pippos</strong>
+                            <div class="contact-role">Speaker, Filmmaker, Journalist</div>
+                        </div>
+                        <div class="contact">
+                            <strong>ChandraKumar R Pillai</strong>
+                            <div class="contact-role">Top AI Voice, 102K+ followers</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Vida Asrina Dhulst</strong>
+                            <div class="contact-role">CX Executive, TEDx Speaker</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Dayle Stevens OAM</strong>
+                            <div class="contact-role">Data & AI Executive, Telstra</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Sheena Boughen OAM</strong>
+                            <div class="contact-role">Chair Australian String Quartet</div>
+                        </div>
+                        <div class="contact">
+                            <strong>Dr. Brian Gordon OAM</strong>
+                            <div class="contact-role">Chair Bendigo Community Bank</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-section">
+                <div class="highlight-title">⭐ Most Engaged Contact</div>
+                <div class="highlight-content">
+                    <strong>Georgie Carey</strong> (Former Deputy Mayor, Harvard MPP) — <strong>4× engagements</strong>
+                </div>
+            </div>
+
+            <div class="insight-section">
+                <div class="insight-title">💡 Key Insight</div>
+                <div class="insight-content">
+                    60% of notable engagers are strategically aligned with Next25's mission across democracy reform, women in politics, and systems change.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
